@@ -23,11 +23,17 @@
   <!-- Menu Lateral -->
   <div class="sidebar" id="sidebar"><br>
     <a href="/" onclick="toggleSidebar()"><i class="bi bi-house-door"></i><span class="text">Página Inicial</span></a>
-    <a href="/produto" onclick="toggleSidebar()"><i class="bi bi-person-plus"></i><span class="text">Cadastro</span></a>
+    <!-- <a href="/produto" onclick="toggleSidebar()"><i class="bi bi-person-plus"></i><span class="text">Cadastro</span></a> -->
     <a href="/produto/lista" onclick="toggleSidebar()"><i class="bi bi-list"></i><span class="text">Lista de Usuários</span></a>
   </div>
 
-  
+  <script src="config.js"></script>
+  <script>
+    fetch(`${API_URL}/produto`)
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.error('Erro:', error));
+  </script>
 
 </body>
 </html>

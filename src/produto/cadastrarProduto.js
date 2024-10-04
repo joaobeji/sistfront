@@ -1,5 +1,4 @@
-require('dotenv').config();
-const apiUrl = process.env.API_URL;
+
 
 document.getElementById('cadastroForm').addEventListener('submit', async function(event) {
     event.preventDefault(); // Impede o envio padrão do formulário
@@ -12,7 +11,7 @@ document.getElementById('cadastroForm').addEventListener('submit', async functio
     };
   
     try {
-      const response = await fetch(`${apiUrl}/produtos`, {
+      const response = await fetch('/produtos', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
