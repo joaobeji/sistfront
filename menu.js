@@ -1,5 +1,4 @@
 
-
 document.addEventListener("DOMContentLoaded", function() {
     // Usando fetch para carregar o conteúdo do menu.html
     fetch('../menu.html')
