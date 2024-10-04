@@ -1,7 +1,10 @@
+require('dotenv').config();
+const apiUrl = process.env.API_URL;
+
 
 document.addEventListener("DOMContentLoaded", function() {
     // Usando fetch para carregar o conteúdo do menu.html
-    fetch('../menu.html')
+    fetch(`${apiUrl}/menu.html`)
         .then(response => {
             // Verifica se a resposta foi bem-sucedida
             if (!response.ok) {
